@@ -12,15 +12,15 @@
     <h1>Employee Records</h1>
     <div>
         <label for "firstNameInput">First Name:</label>
-        <input type="text" id="firstNameInput">
+        <input type="text" id="firstNameInput" ng-model="vm.newEmployee.first_name">
         <label for "lastNameInput">Last Name:</label>
-        <input type="text" id="lasttNameInput">
+        <input type="text" id="lasttNameInput" ng-model="vm.newEmployee.last_name">
         <br>
         <label for "jobTitleInput">Job Title:</label>
-        <input type="text" id="jobTitleInput">
+        <input type="text" id="jobTitleInput" ng-model="vm.newEmployee.job_title">
         <label for "salaryInput">Annual Salary:</label>
-        <input type="number" id="salaryInput">
-        <button id="submitButton">Submit</button>
+        <input type="number" id="salaryInput" ng-model="vm.newEmployee.annual_salary">
+        <button id="submitButton" ng-click="vm.addEmployee()">Submit</button>
     </div>
     <div>
         <table>
