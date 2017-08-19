@@ -1,24 +1,47 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <meta charset="utf-8">
-        <title>Full Stack Employees</title>
-        <script src="vendors/angular.min.js"></script>
-        <script src="client.js"></script>
-    </head>
-    <body>
-       <h1>Employee Records</h1>
-       <div>
-           <label for "firstNameInput">First Name:</label>
-           <input type="text" id="firstNameInput">
-           <label for "lastNameInput">Last Name:</label>
-           <input type="text" id="lasttNameInput">
-           <br>
-           <label for "jobTitleInput">Job Title:</label>
-           <input type="text" id="jobTitleInput">
-           <label for "salaryInput">Annual Salary:</label>
-           <input type="number" id="salaryInput">
-           <button id="submitButton">Submit</button>
-       </div>
-    </body>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Full Stack Employees</title>
+    <script src="vendors/angular.min.js"></script>
+    <script src="client.js"></script>
+</head>
+
+<body ng-app="EmployeeApp" ng-controller="EmployeeController as vm">
+    <h1>Employee Records</h1>
+    <div>
+        <label for "firstNameInput">First Name:</label>
+        <input type="text" id="firstNameInput">
+        <label for "lastNameInput">Last Name:</label>
+        <input type="text" id="lasttNameInput">
+        <br>
+        <label for "jobTitleInput">Job Title:</label>
+        <input type="text" id="jobTitleInput">
+        <label for "salaryInput">Annual Salary:</label>
+        <input type="number" id="salaryInput">
+        <button id="submitButton">Submit</button>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Job title</th>
+                    <th>Annual Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in vm.employees">
+                    <td>{{item.first_name}}</td>
+                    <td>{{item.last_name}}</td>
+                    <td>{{item.job_title}}</td>
+                    <td>{{item.annual_salary}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
 </html>
