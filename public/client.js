@@ -39,6 +39,17 @@ app.controller('EmployeeController', ['$http', function ($http) {
             self.newEmployee = {};
         }) //end of http
     };
+    self.updateEmployees = function (id) {
+        console.log(id);
+        $http({
+            method: 'PUT',
+            url: '/employee/' + id,
+            data: self.newEmployee
+        }).then(function (response){
+            self.getEmployees();
+            self.newEmployee = {};
+        })
+    }
 
     self.getEmployees();
 }]);
