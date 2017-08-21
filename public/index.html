@@ -31,6 +31,7 @@
                     <th>Last Name</th>
                     <th>Job title</th>
                     <th>Annual Salary</th>
+                    <th>Active</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,7 +40,9 @@
                     <td>{{item.last_name}}</td>
                     <td>{{item.job_title}}</td>
                     <td>{{item.annual_salary}}</td>
-                    <td><button class="updateButton" ng-click="vm.updateEmployees(item.id)">Update</button></td>
+                    <td>{{item.is_active}}</td>
+                    <td><button class="activeButton" ng-click="">Make Inactive</button></td>
+                    <td><button class="updateButton" ng-click="vm.updateEmployees(item.id)">Update Info</button></td>
                 </tr>
             </tbody>
         </table>

@@ -3,6 +3,7 @@ CREATE TABLE employees (
 	first_name VARCHAR(80) NOT NULL,
 	last_name VARCHAR(80) NOT NULL,
 	job_title VARCHAR(80) NOT NULL,
-	annual_salary INT
+	annual_salary INT,
+	is_active BOOLEAN
 );
 
