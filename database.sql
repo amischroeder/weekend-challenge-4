@@ -4,6 +4,6 @@ CREATE TABLE employees (
 	last_name VARCHAR(80) NOT NULL,
 	job_title VARCHAR(80) NOT NULL,
 	annual_salary INT,
-	is_active BOOLEAN
+	is_active BOOLEAN DEFAULT TRUE
 );
 
